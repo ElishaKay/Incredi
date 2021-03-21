@@ -33,7 +33,7 @@ async function getPercentageDifferencesPerDate(req,res,next){
 	} else {
 		console.log('need to compare this transaction to the previous transaction of the given parent_id', data[i]);
 		
-		let {parent_id, parent_id_name, date, sum} = latestTransactionOfCustomerX;
+		let {parent_id, parent_id_name} = latestTransactionOfCustomerX;
 
 		let earlierDate = data[i].date.split(' ')[0];  
 		let laterDate = latestTransactionOfCustomerX.date.split(' ')[0];
