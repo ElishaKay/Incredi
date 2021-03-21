@@ -1,7 +1,5 @@
 require('dotenv').config()
-const env = process.env;
-
-console.log('process.env',process.env)
+const env = process.env
 
 const config = {
   db: { /* don’t expose password or any sensitive info, done only for demo */
