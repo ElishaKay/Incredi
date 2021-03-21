@@ -1,23 +1,16 @@
-const mysql = require('mysql');
+require('dotenv').config()
+const env = process.env;
 
-// First you need to create a connection to the database
-// Be sure to replace 'user' and 'password' with the correct values
-const con = mysql.createConnection({
-  host: 'localhost',
-  user: 'user',
-  password: 'password',
-});
+console.log('process.env',process.env)
 
-con.connect((err) => {
-  if(err){
-    console.log('Error connecting to Db');
-    return;
-  }
-  console.log('Connection established');
-});
-
-con.end((err) => {
-  // The connection is terminated gracefully
-  // Ensures all remaining queries are executed
-  // Then sends a quit packet to the MySQL server.
-});
+const config = {
+  db: { /* don’t expose password or any sensitive info, done only for demo */
+    host: env.DB_HOST || 'ipobfcpvprjpmdo9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user: env.DB_USER || 'b3x8jlthtcu1mfqj',
+    password: env.DB_PASSWORD || 'jirra8u68nycxkcl',
+    database: env.DB_NAME || 'vd29u8yrgnvmheaz',
+  },
+  listPerPage: env.LIST_PER_PAGE || 10,
+};
+  
+module.exports = config;

@@ -1,7 +1,7 @@
 {
   "name": "newsapp-react-nodejs",
   "version": "1.0.0",
-  "description": "NewsApp project written with react with nodejs",
+  "description": "Incredi Stats written with react with nodejs",
   "main": "server.js",
   "scripts": {
     "start": "node server.bundle.js",
@@ -10,11 +10,13 @@
   },
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "geoip-lite": "^1.4.2",
     "gnews": "^1.0.3",
     "http-proxy-middleware": "^1.0.4",
     "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
     "rss-parser": "^3.10.0"
   },
   "devDependencies": {
