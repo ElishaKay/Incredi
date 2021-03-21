@@ -8,8 +8,8 @@ export const SumStats = ({sumStats}) => {
         return(
               <tr key = {index} className={index%2 === 0?'odd':'even'}>
                   <td>{sumStat.parent_id}</td>
-                  <td>{sumStat.The_Year}</td>
-                  <td>{sumStat.Yearly_Sum}</td>
+                  <td>{sumStat.the_year}</td>
+                  <td>{sumStat.yearly_sum}</td>
               </tr>
           )
     }
@@ -18,7 +18,7 @@ export const SumStats = ({sumStats}) => {
 
     return(
         <div className="container">
-            <h2>Users</h2>
+            <h2>Sums Per Parent Per Year (in Descending Order)</h2>
             <table className="table table-bordered">
                 <thead>
                 <tr>

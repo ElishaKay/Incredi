@@ -3,12 +3,12 @@ const db = require('../db/db');
 
 async function getSumsPerParentPerYear(req,res,next){
   const data = await db.query(
-    `SELECT parent_id, YEAR(date) as The_Year, SUM(sum) AS Yearly_Sum FROM
+    `SELECT parent_id, YEAR(date) as the_year, SUM(sum) AS yearly_sum FROM
 		(SELECT * FROM transactions
 		WHERE type = 'customer' 
 		AND sum >=0) as segment
 	GROUP BY YEAR(date), parent_id
-	ORDER BY Yearly_Sum DESC`, []
+	ORDER BY yearly_sum DESC`, []
   );
 
   res.json(data)

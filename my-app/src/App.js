@@ -8,7 +8,7 @@ import {  getPercentageDifferences,
        } from './services/Stats'
 
 import { SumStats } from './components/SumStats'
-
+import { PercentageStats } from './components/PercentageStats'
 
 class App extends Component {
 
@@ -39,6 +39,12 @@ class App extends Component {
         
         <div >
           <SumStats sumStats={this.state.sumStats}></SumStats>
+        </div>
+
+        <br/>
+
+        <div >
+          <PercentageStats percentageStats={this.state.percentageStats}></PercentageStats>
         </div>
 
       </div>
