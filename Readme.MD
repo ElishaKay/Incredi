@@ -2,15 +2,12 @@
 <img src="sum-per-parent.png"/>
 
 <h1>Start the NodeJS Server</h1>
-```js
-cd api
-npm install
-nodemon server
-```
+<p>cd api</p>
+<p>npm install</p>
+<p>nodemon server</p>
+
 
 <h1>Start the React App</h1>
-```js
-cd my-app
-npm install
-npm start
-```
+<p>cd my-app</p>
+<p>npm install</p>
+<p>npm start</p>
