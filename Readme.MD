@@ -1,4 +1,4 @@
-<img src="percentage-differences.png"/>
+<img src="percentage-difference.png"/>
 <img src="sum-per-parent.png"/>
 
 <h1>Start the NodeJS Server</h1>
