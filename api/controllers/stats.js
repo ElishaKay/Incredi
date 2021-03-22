@@ -41,8 +41,11 @@ async function getPercentageDifferencesPerDate(req,res,next){
 		let percentageDifference = latestTransactionOfCustomerX.sum/data[i].sum;
 
 		percentageDifferences.push({parent_id, parent_id_name, earlierDate, laterDate, percentageDifference});
+
+		latestTransactionOfCustomerX = data[i];
 	}
   }
+
 	  
   res.json(percentageDifferences)
 }
